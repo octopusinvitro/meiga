@@ -1,0 +1,141 @@
+:root {
+  --max-site-width: 60rem;
+  --text-color: #666;
+  --link-color: #bbb;
+  --song-color: #999;
+  --selection-color: #222;
+}
+
+html {
+  color: var(--text-color);
+  background: #000 url('../img/bg.jpg') top center no-repeat;
+  background-size: cover;
+}
+
+body {
+  margin: 0;
+  padding: 0 1em;
+
+  font-family: 'Alegreya', serif;
+  font-style: normal;
+  font-optical-sizing: auto;
+}
+
+@media only screen and (min-width: 45rem) {
+  body {
+    font-size: 2em;
+  }
+}
+
+::-moz-selection,
+::selection {
+  background: var(--selection-color);
+}
+
+hr {
+  border-top: 1px solid var(--text-color);
+}
+
+a {
+  color: var(--link-color);
+}
+
+header,
+section {
+  padding: 0 calc(50% - (var(--max-site-width) / 2));
+}
+
+header {
+  padding-top: 5rem;
+}
+
+.site-logo {
+  display: block;
+  margin: auto;
+  max-width: 100%;
+}
+
+.song {
+  margin: 0;
+  padding: 1rem;
+  font-family: 'Alegreya Sans', sans-serif;
+}
+
+@media only screen and (min-width: 45rem) {
+  .song {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+}
+
+.song-name {
+  width: 15rem;
+
+  font-size: 1.5rem;
+  font-weight: bold;
+  font-variant-caps: small-caps;
+  letter-spacing: 1px;
+
+  color: var(--song-color);
+}
+
+.band-name {
+  font-size: 1.2rem;
+  color: #fff;
+}
+
+.song-audio {
+  flex: 1;
+}
+
+.song-audio audio {
+  display: block;
+  width: 100%;
+  border-radius: 5rem;
+}
+
+.license {
+  font-size: .9rem;
+  text-align: center;
+}
+
+.license img {
+  margin-right: 1rem;
+  padding: 0 .5rem;
+  background: var(--link-color);
+}
+
+.site-footer {
+  margin: auto auto 0;
+  padding: 5rem 0;
+  font-family: 'Alegreya Sans', sans-serif;
+  text-align: center;
+}
+
+@media only screen and (min-width: 45rem) {
+  .site-footer {
+    font-size: 1.2rem;
+  }
+}
+
+.social-media {
+  list-style: none;
+
+  max-width: 20rem;
+  margin: 1rem auto;
+  padding: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.icon {
+  display: inline-block;
+  width: 2rem;
+}
+
+@view-transition {
+  navigation: auto;
+}
